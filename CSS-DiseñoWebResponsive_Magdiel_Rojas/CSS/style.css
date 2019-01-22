@@ -1,0 +1,238 @@
+body{
+  font-family: 'Dancing Script', cursive;
+  background: #02010a;
+}
+
+#contenido{
+  display: flex;
+  flex-flow: wrap;
+}
+
+header{
+  background-color: #5b7989;
+  border-radius: 10px 10px 0px 0px;
+  width: 100%;
+  position: sticky;
+  animation: slidein 2s;
+  top: 0;
+}
+
+@-webkit-keyframes slidein{
+  0%{
+    margin-top: 150%;
+  }
+
+  60%{
+    margin-top: -5%;
+  }
+
+  100%{
+    margin-top: 0%;
+  }
+}
+
+header h1{
+  float: left;
+  color: white;
+  text-shadow: 2px 0px 0px #02010a;
+  margin: 0px;
+  padding-left: 5%;
+  width: 60%;
+  line-height: 60px;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+
+header nav{
+  float: right;
+  padding-right: 5%;
+  width: 40%;
+  line-height: 50px;
+  box-sizing: border-box;
+}
+
+header ul{
+  list-style: none;
+  display: flex;
+  margin: 0px;
+  justify-content: flex-end;
+}
+
+header ul li{
+  margin: 5px;
+}
+
+li a{
+  color: white;
+  letter-spacing: 1px;
+}
+
+.imgItem{
+  padding: 10px 0px 10px 0px;
+}
+
+img{
+  margin: auto;
+  width: 90%;
+  display: block;
+  box-shadow: 2px 2px #02010a;
+}
+
+#imgCentral{
+  background: #82c3a6;
+}
+
+#imgSecundaria{
+  background: #d5c75f;
+  display: flex;
+  flex-flow: wrap;
+}
+
+#paisajes{
+  transition: .6s;
+}
+
+#paisajes:hover{
+  transform: rotate(10deg);
+  box-shadow: 4px 0px 0px #82c3a6;
+  border: 2px solid black;
+}
+
+#retratos{
+  transition: .6s;
+}
+
+#retratos:hover{
+  transform: translate(20px,-5px);
+  box-shadow: 4px 0px 0px #82c3a6;
+  border: 2px solid black;
+}
+
+.tituloImg{
+  width: 50%;
+  text-align: center;
+  margin: auto;
+}
+
+footer{
+  width: 100%;
+  border-radius: 0px 0px 10px 10px;
+  display: flex;
+  flex-flow: wrap;
+  background: #C6d5c5;
+  line-height: 100%;
+}
+
+.colFooter{
+  flex: auto;
+}
+
+.colFooter h2, p{
+  padding-left: 5%;
+}
+
+.colFooter img{
+  width: 2em;
+  float: left;
+  margin: -2% 2% 0% 5%;
+}
+
+#header{
+  position: static;
+}
+
+#galeria{
+  background: #d5c75f;
+  display: flex;
+}
+
+.eBlur{
+  filter: blur(10px);
+}
+
+.eGrises{
+  filter: grayscale(100%);
+}
+
+.eSepia{
+  filter: sepia(90%);
+}
+
+@media (max-width:900px) {
+  #contenido{
+    width: 100%;
+  }
+
+  header h1{
+    width: 100%;
+    text-align: center;
+  }
+
+  header nav{
+    width: 100%;
+  }
+
+  header ul{
+    justify-content: center;
+  }
+
+  .imgSecundaria{
+    height: 40%;
+  }
+
+  #paisajes{
+    order: 1;
+  }
+
+  #retratos{
+    order: 3;
+  }
+
+  #tituloPaisaje{
+    order: 2;
+  }
+
+  #tituloRetrato{
+    order: 4;
+  }
+
+  .colFooter{
+    width: 100%;
+  }
+
+  #galeria{
+    flex-flow: wrap;
+    padding-bottom: 0;
+  }
+
+  #galeria section{
+    margin-bottom: 5%;
+  }
+
+  #galeria1{
+    order: 1
+  }
+
+  #galeria2{
+    order: 3;
+    display: flex;
+    flex-flow: column-reverse;
+  }
+
+  #galeria3{
+    order: 2;
+  }
+}
+
+@media (min-width:900px) {
+  #contenido{
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .imgSecundaria{
+    width: 45%;
+    height: 80%;
+  }
+}
